@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :comments, only: [:edit, :create, :destroy, :update]
+
   resources :blog_posts
 
   root 'blog_posts#index'
